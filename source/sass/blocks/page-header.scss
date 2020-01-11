@@ -1,9 +1,51 @@
 .page-header {
   border: 1px solid black;
+  background-color: $dark-grey;
+  color: $white;
+  padding-left: 253px;
+  padding-right: 256px;
+  padding-top: 33px;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
 }
 
-.page--header__logo {
+.page-header__logo {
+  font-weight: bold;
   font-size: 25px;
   line-height: 29px;
+  padding-left: 68px;
+  position: relative;
 
+  &::before {
+    content: "";
+    width: 52px;
+    height: 52px;
+    border: 1px white solid;
+    position: absolute;
+    left: 0;
+    background-image: url("../img/smart-device-logo.svg");
+  }
+
+  & span {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    color: $grey;
+    display: block;
+  }
+}
+
+.page-header__contacts {
+  display: -ms-flex;
+  display: flex;
+}
+
+.page-header__contacts-list {
+  font-family: "PT Mono", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
 }
