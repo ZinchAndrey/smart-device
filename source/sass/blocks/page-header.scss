@@ -4,7 +4,8 @@
   color: $white;
   padding-left: 253px;
   padding-right: 256px;
-  padding-top: 33px;
+  padding-top: 35px;
+  padding-bottom: 30px;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
@@ -21,9 +22,9 @@
     content: "";
     width: 52px;
     height: 52px;
-    border: 1px white solid;
     position: absolute;
     left: 0;
+    top: -5px;
     background-image: url("../img/smart-device-logo.svg");
   }
 
@@ -48,4 +49,53 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__contacts-item {
+  padding-left: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--mail {
+    margin-left: 88px;
+
+    &::before {
+      left: 0;
+      background-image: url("../img/phone-call.svg");
+    }
+  }
+
+  &--phone::before {
+    left: 0;
+    background-image: url("../img/envelope.svg");
+  }
+}
+
+.page-header__button {
+  background-color: inherit;
+  border: 1px solid $white;
+  border-radius: 5px;
+  width: 180px;
+  height: 45px;
+  color: inherit;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-left: 45px;
 }
