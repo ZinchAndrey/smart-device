@@ -1,0 +1,62 @@
+.promo {
+  background-color: $dark-grey;
+  padding-left: 249px;
+  padding-right: 177px;
+  padding-top: 200px;
+  padding-bottom: 278px;
+  color: $white;
+  position: relative;
+
+  h2 {
+    margin: 0;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  p {
+    font-family: "PT Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    padding-left: 100px;
+    width: 683px; //временно
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  p::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+    left: 0;
+    top: 15px;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    width: 705px;
+    height: 515px;
+    z-index: 1;
+    right: 0px;
+    top: -60px;
+    background-image: url("../img/chip@1x.png");
+  }
+}
+
+.promo__button {
+  height: 55px;
+  background-color: $blue;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  width: 407px; // временно
+  margin-left: 100px;
+}

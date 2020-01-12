@@ -1,5 +1,4 @@
 .page-header {
-  border: 1px solid black;
   background-color: $dark-grey;
   color: $white;
   padding-left: 253px;
@@ -85,17 +84,10 @@
 .page-header__button {
   background-color: inherit;
   border: 1px solid $white;
-  border-radius: 5px;
   width: 180px;
   height: 45px;
   color: inherit;
-  text-transform: uppercase;
-  font-family: inherit;
-  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  cursor: pointer;
   margin-left: 45px;
 }
