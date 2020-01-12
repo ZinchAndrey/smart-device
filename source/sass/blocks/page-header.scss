@@ -28,7 +28,7 @@
   }
 
   & span {
-    font-family: "Roboto", "Arial", sans-serif;
+    font-family: $roboto;
     font-size: 12px;
     line-height: 14px;
     font-weight: 500;
@@ -43,7 +43,7 @@
 }
 
 .page-header__contacts-list {
-  font-family: "PT Mono", serif;
+  font-family: $pt-mono;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

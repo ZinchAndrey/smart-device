@@ -1,0 +1,47 @@
+.about {
+  padding-left: 555px;
+  padding-right: 375px;
+  padding-bottom: 110px;
+  color: $dark-grey-text;
+  position: relative;
+
+  h2 {
+    margin: 0;
+    font-family: $roboto-condensed;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 317px;
+      left: -210px;
+      background-image: url("../img/2005@1x.png");
+    }
+  }
+
+  p {
+    font-family: $pt-mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+.about__button {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: $blue;
+  border: 1px solid $blue;
+  display: block;
+  width: 180px;
+  height: 45px;
+  box-sizing: border-box;
+  margin-top: 35px;
+}

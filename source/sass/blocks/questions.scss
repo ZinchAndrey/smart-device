@@ -1,0 +1,133 @@
+.questions {
+  background-color: $blue;
+  color: $white;
+  padding-left: 50%;
+  padding-right: 375px;
+  padding-top: 95px;
+  padding-bottom: 110px;
+  font-family: $pt-mono;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 511px;
+    height: 288px;
+    left: 350px;
+    top: 160px;
+    background-image: url("../img/paper_airplane@1x.png");
+  }
+
+  h2 {
+    margin: 0;
+    font-family: $roboto-condensed;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+}
+
+.questions__input-block {
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  input {
+    width: 40%;
+    padding: 14px 16px;
+    border: none;
+    color: $white;
+    background-color: $light-blue;
+    margin-bottom: 40px;
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white;
+    }
+
+    &::-ms-input-placeholder {
+      color: $white;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    color: $white;
+    background-color: $light-blue;
+    margin-bottom: 40px;
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white;
+    }
+
+    &::-ms-input-placeholder {
+      color: $white;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+}
+
+.questions__button-block {
+  display: -ms-flex;
+  display: flex;
+  box-sizing: border-box;
+  // justify-content: space-between;
+
+  label {
+    width: 40%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $white;
+      left: -32px;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.questions__button {
+  width: 270px;
+  height: 45px;
+  background-color: $blue;
+  border: 1px solid $white;
+  margin-right: 70px;
+}
