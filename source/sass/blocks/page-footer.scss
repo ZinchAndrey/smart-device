@@ -1,0 +1,115 @@
+.page-footer {
+  font-family: $pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: $black-background;
+
+  h2 {
+    font-family: $roboto-condensed;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: $black;
+  }
+}
+
+.page-footer__wrapper {
+  padding: 65px 253px;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__logo {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  padding-left: 68px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    background-image: url("../img/smart-device-logo.svg");
+  }
+
+  & span {
+    font-family: $roboto;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    color: $grey;
+    display: block;
+  }
+}
+
+.page-footer__social-list {
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.page-footer__nav {
+}
+
+.page-footer__nav-list {
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  height: 100px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.page-footer__nav-item {
+  max-width: 240px;
+
+  & a {
+    opacity: 0.5;
+  }
+
+  & a:hover {
+    opacity: 0.9;
+  }
+}
+
+.page-footer__contacts {
+  p {
+    margin: 0;
+
+    & a {
+      opacity: 0.5;
+    }
+
+    & a:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.page-footer__rights {
+  padding: 14px 255px;
+  border-top: 1px solid $grey-border;
+  opacity: 0.5;
+  text-transform: uppercase;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
