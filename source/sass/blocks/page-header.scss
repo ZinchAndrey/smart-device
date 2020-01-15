@@ -1,10 +1,8 @@
 .page-header {
   background-color: $dark-grey;
   color: $white;
-  padding-left: 253px;
-  padding-right: 256px;
-  padding-top: 35px;
-  padding-bottom: 30px;
+  padding: 35px 13.5% 30px 13%;
+  // padding: 35px 256px 30px 253px;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
@@ -57,7 +55,7 @@
   padding-left: 40px;
   position: relative;
 
-  &::before {
+  & span::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -67,17 +65,19 @@
   }
 
   &--mail {
-    margin-left: 88px;
-
-    &::before {
+    & span::before {
       left: 0;
-      background-image: url("../img/phone-call.svg");
+      background-image: url("../img/envelope.svg");
     }
   }
 
-  &--phone::before {
-    left: 0;
-    background-image: url("../img/envelope.svg");
+  &--phone {
+    margin-left: 88px;
+
+    & span::before {
+      left: 0;
+      background-image: url("../img/phone-call.svg");
+    }
   }
 }
 
@@ -90,4 +90,40 @@
   font-size: 14px;
   line-height: 16px;
   margin-left: 45px;
+}
+
+@media (max-width: 1250px) {
+  .page-header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .page-header {
+    span {
+      display: none;
+    }
+  }
+
+  .page-header__button {
+    display: none;
+  }
+
+  // .page-header__contacts-item {
+  // }
+
+  .page-header__contacts-item--mail span::before {
+    width: 26px;
+    height: 24px;
+    background-size: 26px 19px;
+    background-position: center;
+  }
+
+  .page-header__contacts-item--phone span::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-position: center;
+  }
 }

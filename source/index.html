@@ -20,8 +20,8 @@
     <div class="page-header__logo">Smart Device<span>умные технологии</span></div>
     <div class="page-header__contacts">
       <ul class="page-header__contacts-list">
-        <li class="page-header__contacts-item page-header__contacts-item--phone"><a href="mailto:info@sd.ru">info@sd.ru</a></li>
-        <li class="page-header__contacts-item page-header__contacts-item--mail"><a href="tel:+74950005252">+7 (495) 000 52 52</a></li>
+        <li class="page-header__contacts-item page-header__contacts-item--mail"><a href="mailto:info@sd.ru"><span>info@sd.ru</span></a></li>
+        <li class="page-header__contacts-item page-header__contacts-item--phone"><a href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a></li>
       </ul>
       <button class="page-header__button button">Заказать звонок</button>
     </div>
@@ -29,10 +29,12 @@
   <main class="page-main">
     <h1 class="visually-hidden">Проект "Smart Device"</h1>
     <section class="promo">
-      <h2>Печатные платы</h2>
-      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="promo__button button">Получить бесплатную консультацию</button>
-      <!-- что должно происходить при клике? От этого зависит - кнопка или ссылка -->
+      <div class="promo__wrapper">
+        <h2>Печатные платы</h2>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <button class="promo__button button">Получить бесплатную консультацию</button>
+        <!-- что должно происходить при клике? От этого зависит - кнопка или ссылка -->
+      </div>
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
@@ -150,7 +152,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__social-wrapper">
-        <div class="page-footer__logo">Smart Device<span>умные технологии</span></div>
+        <div class="page-footer__logo">Service Device<span>умные технологии</span></div>
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item page-footer__social-item--facebook"><a href="#"><img src="../img/facebook.svg" alt="Facebook"></a></li>
           <li class="page-footer__social-item page-footer__social-item--ok"><a href="#"><img src="../img/ok.svg" alt="OK"></a></li>
@@ -178,6 +180,7 @@
       </div>
     </div>
     <div class="page-footer__rights">
+      <!-- Тут добавить отступы и корректные и модификаторы для отступов -->
       <span>Все права защищены</span>
       <span>1999-2018 SD Service Devices</span>
       <span>Условия конфиденциальности</span>

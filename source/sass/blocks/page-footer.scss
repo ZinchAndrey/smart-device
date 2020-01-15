@@ -11,6 +11,7 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 16px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 25px;
@@ -20,12 +21,14 @@
 
 .page-footer__wrapper {
   padding: 65px 253px;
+  padding-bottom: 55px;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
 }
 
 .page-footer__logo {
+  font-family: $roboto-condensed;
   font-weight: bold;
   font-size: 25px;
   line-height: 29px;
@@ -52,13 +55,17 @@
   }
 }
 
+.page-footer__social-wrapper {
+  padding-top: 5px;
+}
+
 .page-footer__social-list {
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
   width: 112px;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 60px;
   padding: 0;
 }
 
