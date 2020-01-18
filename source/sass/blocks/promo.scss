@@ -1,34 +1,16 @@
 .promo {
   background-color: $dark-grey;
-  // padding-left: 249px;
-  // padding-right: 177px;
-  // padding-top: 200px;
-  // padding-bottom: 278px;
 
   color: $white;
   position: relative;
   overflow: hidden;
 
   &__wrapper {
-    // padding: 200px 25px 278px 25px;
-    // max-width: 1461px;
-    // width: 100%;
     @include container-desktop-wide;
     padding-top: 200px;
     padding-bottom: 278px;
-
     position: relative;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 705px;
-    //   height: 515px;
-    //   z-index: 1;
-    //   right: -100%;
-    //   top: -60px;
-    //   background-image: url("../img/chip@1x.png");
-    // }
+    z-index: 1;
   }
 
   h2 {
@@ -47,7 +29,6 @@
     line-height: 34px;
     padding-left: 92px;
     box-sizing: inherit;
-    //width: 683px; //временно
     position: relative;
     margin-top: 25px;
     margin-bottom: 45px;
@@ -82,4 +63,46 @@
   left: 100%;
   margin-left: -46%;
   top: 140px;
+}
+
+@media (max-width: 1023px) {
+  .promo {
+    h2 {
+      font-size: 60px;
+      line-height: 70px;
+      margin-right: 50px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      width: 70%;
+      padding-left: 50px;
+      margin-bottom: 55px;
+    }
+
+    p::before {
+      width: 33px;
+    }
+  }
+
+  .promo__wrapper {
+    padding: 90px 35px 165px 25px;
+    width: 83%;
+  }
+
+  .promo__button {
+    width: 379px;
+    margin-left: 47px;
+  }
+
+  .promo__image {
+    top: 10px;
+    margin-left: -34%;
+
+    img {
+      width: 465px;
+      height: auto;
+    }
+  }
 }

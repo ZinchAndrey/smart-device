@@ -8,7 +8,7 @@
   padding-left: 205px;
   color: $dark-grey-text;
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 105px;
 
   h2 {
     margin: 0;
@@ -35,6 +35,10 @@
     font-size: 16px;
     line-height: 22px;
     margin: 20px 0;
+
+    .about__tablet {
+      font-size: 0;
+    }
   }
 }
 
@@ -49,4 +53,37 @@
   height: 45px;
   box-sizing: border-box;
   margin-top: 40px;
+}
+
+@media (max-width: 1023px) {
+  .about {
+    padding-left: 212px;
+    margin-bottom: 85px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 45px;
+
+      &::before {
+        background-image: url("../img/2005-tablet@1x.png");
+        height: 362px;
+      }
+    }
+
+    p {
+      margin: 24px 0;
+
+      .about__tablet {
+        font-size: inherit;
+      }
+
+      .about__desktop {
+        font-size: 0;
+      }
+    }
+  }
+
+  .about__button {
+    margin-top: -10px;
+  }
 }

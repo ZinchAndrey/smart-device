@@ -25,10 +25,14 @@
   display: flex;
   justify-content: space-between;
   padding-left: 0;
+
+  a {
+    width: calc(100% / 3 - 20px);
+  }
 }
 
 .goods__item {
-  width: 370px;
+  // width: 370px;
   height: 620px;
   box-sizing: border-box;
   position: relative;
@@ -76,18 +80,46 @@
     right: 0;
     bottom: 0;
   }
+}
 
-  // &::before {
-  //   content: ">";
-  //   position: absolute;
-  //   width: 8px;
-  //   height: 4px;
-  //   right: 20px;
-  //   bottom: 20px;
-  //   z-index: 1;
-  //   font-size: 20px;
-  //   // -webkit-transform: scale();
-  //   //         transform: scale(2, 2);
-  //   //         transform: rotate(-90deg);
-  // }
+@media (max-width: 1023px) {
+  .goods {
+    padding-top: 50px;
+    padding-bottom: 18px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 45px;
+    }
+  }
+
+  .goods__list {
+    flex-wrap: wrap;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .goods__item-wrapper {
+    padding-top: 40px;
+  }
+
+  .goods__item {
+    height: 256px;
+    width: 100%;
+    margin-bottom: 45px;
+
+    &--manufacture {
+      background-image: url("../img/manufacture-tablet@1x.jpg");
+    }
+
+    &--montage {
+      background-image: url("../img/montage-tablet@1x.jpg");
+    }
+
+    &--lights {
+      background-image: url("../img/lights-tablet@1x.jpg");
+    }
+  }
 }
