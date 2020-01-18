@@ -1,9 +1,14 @@
 .about {
-  padding-left: 555px;
-  padding-right: 375px;
-  padding-bottom: 110px;
+  // padding-left: 555px;
+  // padding-right: 375px;
+  // padding-bottom: 110px;
+  // padding: 0 25px;
+  // max-width: 1220px;
+  @include container-desktop-tight;
+  padding-left: 205px;
   color: $dark-grey-text;
   position: relative;
+  margin-bottom: 110px;
 
   h2 {
     margin: 0;
@@ -29,7 +34,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 30px;
+    margin: 20px 0;
   }
 }
 
@@ -43,5 +48,5 @@
   width: 180px;
   height: 45px;
   box-sizing: border-box;
-  margin-top: 35px;
+  margin-top: 40px;
 }

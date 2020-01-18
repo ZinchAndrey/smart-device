@@ -1,8 +1,8 @@
 .goods {
   background-color: $black-background;
   color: $white;
-  padding-left: 375px;
-  padding-right: 375px;
+  // padding-left: 375px;
+  // padding-right: 375px;
   padding-top: 90px;
   padding-bottom: 110px;
 
@@ -14,6 +14,10 @@
     margin: 0;
     margin-bottom: 50px;
   }
+}
+
+.goods__container {
+  @include container-desktop-tight;
 }
 
 .goods__list {

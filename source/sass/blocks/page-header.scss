@@ -1,8 +1,12 @@
 .page-header {
   background-color: $dark-grey;
   color: $white;
-  padding: 35px 13.5% 30px 13%;
-  // padding: 35px 256px 30px 253px;
+}
+
+.page-header__container {
+  @include container-desktop-wide;
+  padding-top: 35px;
+  padding-bottom: 30px;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
@@ -54,10 +58,19 @@
 .page-header__contacts-item {
   padding-left: 40px;
   position: relative;
+  background-position: left;
 
-  & span::before {
+  // a {
+  //   background-image: url("../img/envelope.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: 0px;
+  // }
+
+  & a::before {
     content: "";
-    position: absolute;
+    // position: absolute;
+    display: inline-block;
+    vertical-align: middle;
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
@@ -65,18 +78,20 @@
   }
 
   &--mail {
-    & span::before {
+    & a::before {
       left: 0;
       background-image: url("../img/envelope.svg");
+      margin-right: 20px;
     }
   }
 
   &--phone {
-    margin-left: 88px;
+    margin-left: 45px;
 
-    & span::before {
+    & a::before {
       left: 0;
       background-image: url("../img/phone-call.svg");
+      margin-right: 16px;
     }
   }
 }
@@ -89,41 +104,56 @@
   color: inherit;
   font-size: 14px;
   line-height: 16px;
-  margin-left: 45px;
+  margin-left: 50px;
 }
 
-@media (max-width: 1250px) {
-  .page-header {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
+// @media (max-width: 1250px) {
+//   .page-header {
+//     padding-left: 25px;
+//     padding-right: 25px;
+//   }
+// }
 
 @media (max-width: 1023px) {
   .page-header {
-    span {
-      display: none;
+    a {
+      font-size: 0;
     }
+  }
+
+  .page-header__container {
+    padding-top: 25px;
   }
 
   .page-header__button {
     display: none;
   }
 
-  // .page-header__contacts-item {
-  // }
+  .page-header__contacts-list {
+    margin-top: 5px;
+  }
 
-  .page-header__contacts-item--mail span::before {
+  .page-header__contacts-item {
+    padding-left: 0;
+  }
+
+  .page-header__contacts-item--mail a::before {
     width: 26px;
     height: 24px;
+    margin: 0;
     background-size: 26px 19px;
     background-position: center;
   }
 
-  .page-header__contacts-item--phone span::before {
-    width: 24px;
-    height: 24px;
-    background-size: 24px;
-    background-position: center;
+  .page-header__contacts-item--phone {
+    margin-left: 32px;
+
+    & a::before {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      background-size: 24px;
+      background-position: center;
+    }
   }
 }

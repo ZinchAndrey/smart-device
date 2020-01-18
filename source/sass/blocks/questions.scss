@@ -1,25 +1,26 @@
 .questions {
   background-color: $blue;
   color: $white;
-  padding-left: 51%;
-  padding-right: 375px;
+
+  // padding-left: 51%;
+  // padding-right: 375px;
   padding-top: 95px;
-  padding-bottom: 110px;
+  padding-bottom: 115px;
   font-family: $pt-mono;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 511px;
-    height: 288px;
-    left: 350px;
-    top: 160px;
-    background-image: url("../img/paper_airplane@1x.png");
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 511px;
+  //   height: 288px;
+  //   left: 350px;
+  //   top: 160px;
+  //   background-image: url("../img/paper_airplane@1x.png");
+  // }
 
   h2 {
     margin: 0;
@@ -35,6 +36,30 @@
   }
 }
 
+.questions__container {
+  @include container-desktop-tight;
+  position: relative;
+  // display: -webkit-flex;
+  // display: -ms-flex;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+
+  img {
+    // margin-right: 110px;
+    // margin-left: -25px;
+    // margin-top: -40px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+}
+
+.questions__wrapper {
+  width: 49%;
+  margin-left: auto;
+}
+
 .questions__input-block {
   display: -ms-flex;
   display: flex;
@@ -42,8 +67,9 @@
   flex-wrap: wrap;
 
   input {
-    width: 40%;
-    padding: 14px 16px;
+    box-sizing: border-box;
+    width: 47%;
+    padding: 15px 18px;
     border: none;
     color: $white;
     background-color: $light-blue;
@@ -72,11 +98,11 @@
 
   textarea {
     width: 100%;
-    padding: 14px 16px;
+    padding: 15px 18px;
     border: none;
     color: $white;
     background-color: $light-blue;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 
     &::-webkit-input-placeholder {
       color: $white;
@@ -104,13 +130,18 @@
   display: -ms-flex;
   display: flex;
   box-sizing: border-box;
-  // justify-content: space-between;
+  justify-content: space-between;
 
   label {
-    width: 42%;
+    width: 40%;
     position: relative;
     opacity: 0.8;
-    padding-top: 5px;
+    padding-top: 8px;
+    margin-left: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
 
     &::before {
       content: "";
@@ -130,11 +161,12 @@
 .questions__button {
   width: 270px;
   height: 45px;
+  box-sizing: border-box;
   background-color: $blue;
   border: 1px solid $white;
   font-family: $roboto-condensed;
   font-size: 14px;
   line-height: 16px;
-  margin-right: 70px;
+  // margin-right: auto;
   letter-spacing: 0.05em;
 }
