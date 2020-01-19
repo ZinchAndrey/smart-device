@@ -47,7 +47,8 @@
   }
 }
 
-.promo__button {
+.promo__button,
+.promo__button--mobile {
   height: 55px;
   background-color: $blue;
   font-size: 16px;
@@ -55,6 +56,10 @@
   letter-spacing: 0.05em;
   width: 407px; // временно
   margin-left: 92px;
+}
+
+.promo__button--mobile {
+  display: none;
 }
 
 .promo__image {
@@ -104,5 +109,49 @@
       width: 465px;
       height: auto;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    h2 {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      width: 100%;
+      margin-bottom: 45px;
+    }
+  }
+
+  .promo__wrapper {
+    @include container-mobile;
+    width: 100%;
+    padding-top: 195px;
+    padding-bottom: 70px;
+  }
+
+  .promo__image {
+    left: 42%;
+    top: 0;
+
+    img {
+      width: 301px;
+      height: auto;
+    }
+  }
+
+  .promo__button {
+    display: none;
+  }
+
+  .promo__button--mobile {
+    margin: 0 auto;
+    display: block;
+    max-width: 450px;
+    width: 100%;
   }
 }

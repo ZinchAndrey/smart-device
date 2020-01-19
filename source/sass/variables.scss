@@ -29,6 +29,12 @@ $pt-mono: "PT Mono", "Arial", serif;
   width: 100%;
 }
 
+@mixin container-mobile() {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
 //стилизация ссылок при наведении и нажатии
 @mixin link-click() {
   a:hover {

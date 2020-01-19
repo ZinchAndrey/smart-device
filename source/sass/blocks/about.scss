@@ -92,3 +92,25 @@
     margin-top: -10px;
   }
 }
+
+@media (max-width: 767px) {
+  .about {
+    @include container-mobile;
+    margin-bottom: 65px;
+
+    h2 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+
+    p {
+      margin-top: 22px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .about__button {
+    margin-top: -13px;
+
+  }
+}

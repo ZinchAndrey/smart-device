@@ -123,3 +123,38 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .goods {
+    h2 {
+      font-size: 28px;
+      line-height: 39px;
+      padding-left: 10px;
+      margin-bottom: 45px;
+    }
+  }
+
+  .goods__container {
+    @include container-mobile;
+  }
+
+  .goods__item-wrapper {
+    padding-top: 20px;
+    padding-left: 35px;
+  }
+
+  .goods__item {
+    margin-bottom: 30px;
+
+    &--manufacture {
+      background-image: url("../img/manufacture-mobile@1x.jpg");
+    }
+
+    &--montage {
+      background-image: url("../img/montage-mobile@1x.jpg");
+    }
+
+    &--lights {
+      background-image: url("../img/lights-mobile@1x.jpg");
+    }
+  }
+}

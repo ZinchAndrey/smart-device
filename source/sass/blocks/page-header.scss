@@ -27,6 +27,8 @@
     left: 0;
     top: -5px;
     background-image: url("../img/smart-device-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   & span {
@@ -151,5 +153,29 @@
       background-size: 24px;
       background-position: center;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header__container {
+    @include container-mobile;
+    padding-top: 15px;
+  }
+
+  .page-header__logo {
+    font-size: 0;
+
+    &::before {
+      background-size: 38px;
+      background-position: left;
+    }
+
+    span {
+      font-size: 0;
+    }
+  }
+
+  .page-header__contacts-item--phone {
+    margin-left: 23px;
   }
 }

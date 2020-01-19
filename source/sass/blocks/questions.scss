@@ -143,6 +143,7 @@
     &::before {
       content: "";
       position: absolute;
+      box-sizing: border-box;
       width: 16px;
       height: 16px;
       border: 1px solid $white;
@@ -212,5 +213,51 @@
 
   .questions__button {
     width: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .questions {
+    padding-top: 30px;
+    padding-bottom: 45px;
+
+    h2 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+
+    p {
+      margin-bottom: 25px;
+      margin-top: 13px;
+    }
+  }
+
+  .questions__container {
+    @include container-mobile;
+  }
+
+  .questions__input-block {
+    input {
+      width: 100%;
+      margin-bottom: 33px;
+    }
+
+    textarea {
+      height: 80px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .questions__button-block {
+    flex-wrap: wrap;
+
+    label {
+      margin-top: 20px;
+      width: 88%;
+    }
+  }
+
+  .questions__button {
+    width: 100%;
   }
 }

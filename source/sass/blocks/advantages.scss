@@ -91,3 +91,25 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .advantages {
+    @include container-mobile;
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
+
+  .advantages__item {
+    width: 100%;
+    padding-top: 70px;
+    min-height: auto;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
