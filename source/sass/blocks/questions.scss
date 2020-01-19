@@ -166,11 +166,17 @@
   line-height: 16px;
   // margin-right: auto;
   letter-spacing: 0.05em;
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
 }
 
 @media (max-width: 1023px) {
   .questions {
     padding-top: 80px;
+    padding-bottom: 105px;
 
     img {
       display: none;

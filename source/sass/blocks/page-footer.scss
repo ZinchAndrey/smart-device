@@ -68,6 +68,17 @@
   margin: 0;
   margin-top: 60px;
   padding: 0;
+
+  @include link-click;
+}
+
+.page-footer__nav-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  justify-content: space-between;
 }
 
 .page-footer__nav {
@@ -86,40 +97,114 @@
 .page-footer__nav-item {
   max-width: 240px;
 
-  & a {
+  a {
     opacity: 0.5;
   }
 
-  & a:hover {
-    opacity: 0.9;
-  }
+  @include link-click;
 }
 
 .page-footer__contacts {
   p {
     margin: 0;
 
-    & a {
+    a {
       opacity: 0.5;
     }
 
-    & a:hover {
-      opacity: 0.9;
-    }
+    @include link-click;
   }
 }
 
 .page-footer__rights {
   @include container-desktop-wide;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid $grey-border;
   opacity: 0.5;
   text-transform: uppercase;
   display: -ms-flex;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
+}
+
+.page-footer__text {
+  &--rights {
+    margin-right: 60px;
+  }
+
+  &--years {
+    margin-right: 11%;
+  }
+
+  &--develop {
+    margin-left: auto;
+  }
+}
+
+.page-footer__social-text {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  display: none;
+  padding-top: 10px;
+  opacity: 0.5;
+}
+
+@media (max-width: 1023px) {
+  .page-footer__wrapper {
+    padding-top: 0;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .page-footer__social-text {
+    display: inline;
+    margin-left: 15px;
+  }
+
+  .page-footer__social-wrapper {
+    width: 100%;
+    padding: 25px 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-border;
+  }
+
+  .page-footer__social-list {
+    margin: 0;
+    align-items: center;
+  }
+
+  .page-footer__nav-container {
+    width: 100%;
+    padding-top: 40px;
+  }
+
+
+  .page-footer__nav-list {
+    height: auto;
+    width: auto;
+  }
+
+  .page-footer__contacts {
+    width: 48%;
+  }
+
+  .page-footer__text {
+    &--rights {
+      display: none;
+    }
+
+    &--years {
+      display: none;
+    }
+  }
 }

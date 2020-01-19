@@ -16,13 +16,7 @@ $roboto: "Roboto", "Arial", sans-serif;
 $roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
 $pt-mono: "PT Mono", "Arial", serif;
 
-//
-// @mixin container() {
-//   margin: 0 auto;
-//   box-sizing: border-box;
-// }
-
-
+//контейнеры
 @mixin container-desktop-wide() {
   padding: 0 25px;
   max-width: 1461px;
@@ -33,4 +27,15 @@ $pt-mono: "PT Mono", "Arial", serif;
   padding: 0 25px;
   max-width: 1220px;
   width: 100%;
+}
+
+//стилизация ссылок при наведении и нажатии
+@mixin link-click() {
+  a:hover {
+    opacity: 0.8;
+  }
+
+  a:active {
+    opacity: 0.3;
+  }
 }

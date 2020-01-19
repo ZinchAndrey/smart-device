@@ -1,13 +1,10 @@
 .goods {
   background-color: $black-background;
   color: $white;
-  // padding-left: 375px;
-  // padding-right: 375px;
   padding-top: 90px;
   padding-bottom: 110px;
 
   h2 {
-    // font-family: $roboto-condensed;
     font-weight: normal;
     font-size: 36px;
     line-height: 51px;
@@ -32,7 +29,6 @@
 }
 
 .goods__item {
-  // width: 370px;
   height: 620px;
   box-sizing: border-box;
   position: relative;
@@ -69,6 +65,10 @@
 
   &:hover {
     background-color: rgba(27, 45, 55, 0.5);
+  }
+
+  &:active {
+    background-color: rgba(27, 45, 55, 0.3);
   }
 
   &::after {

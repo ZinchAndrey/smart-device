@@ -53,6 +53,11 @@
   height: 45px;
   box-sizing: border-box;
   margin-top: 40px;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
 }
 
 @media (max-width: 1023px) {
