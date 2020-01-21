@@ -32,6 +32,8 @@
   height: 620px;
   box-sizing: border-box;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h3 {
     font-family: $roboto-condensed;
@@ -77,6 +79,9 @@
     width: 63px;
     height: 63px;
     background-color: $blue;
+    background-image: url("../img/arrow-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
     right: 0;
     bottom: 0;
   }
