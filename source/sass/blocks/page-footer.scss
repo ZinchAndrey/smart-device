@@ -77,7 +77,7 @@
 
   & a::before {
     content: "";
-    position: absolute;
+    display: block;
     top: 0;
     width: 27px;
     height: 27px;

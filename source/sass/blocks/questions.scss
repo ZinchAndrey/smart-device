@@ -151,6 +151,12 @@
       left: -32px;
     }
   }
+
+  input:checked + label::before {
+    background-image: url("../img/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 // .questions__checkbox:checked + .questions__button-block + label::before{
