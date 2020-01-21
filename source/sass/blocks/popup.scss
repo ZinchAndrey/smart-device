@@ -1,5 +1,19 @@
 .popup {
-  display: none; //временно
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+//добавить модификатор открытия и в нем прописать
+// display: flex; align-items: center; justify-content: center;
+
+
+.popup__container {
+  // display: none; //временно
   margin: 0 auto;
   width: 490px;
   // height: 605px;
@@ -12,7 +26,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  position: absolute;
+  position: fixed;
   top: 136px;
   left: 50%;
   transform: translateX(-50%);

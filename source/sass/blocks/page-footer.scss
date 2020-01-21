@@ -72,6 +72,31 @@
   @include link-click;
 }
 
+.page-footer__social-item {
+  position: relative;
+
+  & a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 27px;
+    height: 27px;
+    background: no-repeat center;
+  }
+
+  &--facebook a::before {
+    background-image: url("../img/facebook.svg");
+  }
+
+  &--ok a::before {
+    background-image: url("../img/ok.svg");
+  }
+
+  &--vk a::before {
+    background-image: url("../img/vk.svg");
+  }
+}
+
 .page-footer__nav-container {
   display: -webkit-flex;
   display: -ms-flex;
