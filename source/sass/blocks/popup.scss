@@ -6,12 +6,22 @@
   background-color: $blue;
   color: $white;
   padding: 33px 40px;
-
   font-family: $pt-mono;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+
+  position: absolute;
+  top: 136px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  animation-name: popup-animation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+
 
   h2 {
     font-family: $roboto-condensed;
@@ -88,6 +98,18 @@
   }
 }
 
+@keyframes popup-animation {
+  0% {
+    top: -500px;
+  }
+  /* 	50% {
+    top: 50px;
+  } */
+  100% {
+    top: 136px;
+  }
+}
+
 .popup__button-block {
   box-sizing: border-box;
   // justify-content: space-between;
@@ -120,4 +142,41 @@
   height: 45px;
   letter-spacing: 0.05em;
   margin-bottom: 40px;
+}
+
+.popup__close {
+  width: 17px;
+  height: 17px;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    content: "";
+    height: 23px;
+    width: 1px;
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 0.8;
+    }
+  }
 }

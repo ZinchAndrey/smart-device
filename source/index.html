@@ -24,7 +24,7 @@
           <li class="page-header__contacts-item page-header__contacts-item--mail"><a href="mailto:info@sd.ru">info@sd.ru</a></li>
           <li class="page-header__contacts-item page-header__contacts-item--phone"><a href="tel:+74950005252">+7 (495) 000 52 52</a></li>
         </ul>
-        <button class="page-header__button button">Заказать звонок</button>
+        <button class="page-header__button button" id="callback">Заказать звонок</button>
       </div>
     </div>
   </header>
@@ -148,9 +148,10 @@
 
       </div>
     </section>
-    <section class="popup">
+    <section class="popup" id="popup">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <button class="popup__close" id="popup__close"></button>
       <form action="" method="get">
         <div class="popup__input-block">
           <input type="text" placeholder="Имя">
@@ -209,5 +210,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js">
+  </script>
 </body>
 </html>
