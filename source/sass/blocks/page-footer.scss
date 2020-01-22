@@ -311,6 +311,9 @@
   }
 
   // всплывающее меню
+  .page-footer__wrapper {
+    padding-bottom: 0;
+  }
 
   .page-footer__contacts-button,
   .page-footer__header-button {
@@ -358,6 +361,7 @@
 
   .page-footer__contacts-block {
     padding-top: 0;
+    padding-bottom: 15px;
   }
 
   .page-footer__nav-list--closed {

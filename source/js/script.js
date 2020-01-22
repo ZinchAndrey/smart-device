@@ -28,8 +28,6 @@ var contactsList = document.getElementById('page-footer__contacts-block');
 footerNavList.classList.remove('page-footer__nav-list--nojs');
 contactsList.classList.remove('page-footer__contacts-block--nojs');
 
-console.log(navButton);
-
 navButton.addEventListener('click', function () {
   if (footerNavList.classList.contains('page-footer__nav-list--closed')) {
     footerNavList.classList.remove('page-footer__nav-list--closed');
