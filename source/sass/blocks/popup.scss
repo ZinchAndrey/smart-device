@@ -200,3 +200,11 @@
     }
   }
 }
+
+.popup--closed {
+  display: none;
+}
+
+.popup--opened {
+  display: block;
+}

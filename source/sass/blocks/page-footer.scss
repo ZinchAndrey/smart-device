@@ -19,6 +19,11 @@
   }
 }
 
+.page-footer__contacts-button,
+.page-footer__header-button {
+  display: none;
+}
+
 .page-footer__wrapper {
   @include container-desktop-wide;
   padding-top: 65px;
@@ -104,9 +109,6 @@
   width: 70%;
   margin-left: auto;
   justify-content: space-between;
-}
-
-.page-footer__nav {
 }
 
 .page-footer__nav-list {
@@ -245,13 +247,11 @@
 }
 
 @media (max-width: 767px) {
-  .page-footer {
-  }
-
   .page-footer__social-wrapper {
     flex-wrap: wrap;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
+    margin-bottom: 5px;
   }
 
   .page-footer__logo {
@@ -272,17 +272,31 @@
   }
 
   .page-footer__nav-container {
-    @include container-mobile;
-    padding-top: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
     flex-wrap: wrap;
     width: 100%;
   }
 
+  .page-footer__nav {
+    width: 100%;
+  }
+
+  .page-footer__nav-list {
+    @include container-mobile;
+    margin-top: 0;
+  }
+
   .page-footer__contacts {
-    width: 90%;
+    width: 100%;
 
     h2 {
       margin-bottom: 30px;
+    }
+
+    .page-footer__header-block {
+      border-top: 1px solid $grey-border;
     }
   }
 
@@ -294,5 +308,76 @@
       margin: 0 auto;
       margin-bottom: 20px;
     }
+  }
+
+  // всплывающее меню
+
+  .page-footer__contacts-button,
+  .page-footer__header-button {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: transparent;
+    // border: 1px solid green;
+    cursor: pointer;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $grey-border;
+    }
+
+    &::before {
+      width: 16px;
+      height: 1px;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+    }
+
+    &::after {
+      height: 16px;
+      width: 1px;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 0;
+    }
+  }
+
+  .page-footer__header-block,
+  .page-footer__contacts-block {
+    @include container-mobile;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding-top: 25px;
+  }
+
+  .page-footer__contacts-block {
+    padding-top: 0;
+  }
+
+  .page-footer__nav-list--closed {
+    display: none;
+  }
+
+  .page-footer__nav-list--opened {
+    display: flex;
+  }
+
+  .page-footer__contacts-block--closed {
+    display: none;
+  }
+
+  .page-footer__contacts-block--opened {
+    display: block;
+  }
+
+  .page-footer__nav-list--nojs,
+  .page-footer__contacts-block--nojs {
+    display: block;
   }
 }

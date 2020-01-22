@@ -147,7 +147,7 @@
         </div>
       </div>
     </section>
-    <section class="popup" id="popup">
+    <section class="popup popup--closed" id="popup">
       <div class="popup__container">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
@@ -181,8 +181,11 @@
         <div class="page-footer__nav-container">
 
           <div class="page-footer__nav">
-            <h2>Разделы сайта</h2>
-            <ul class="page-footer__nav-list">
+            <div class="page-footer__header-block">
+              <h2>Разделы сайта</h2>
+              <button class="page-footer__header-button" id="nav-button"></button>
+            </div>
+            <ul class="page-footer__nav-list page-footer__nav-list--closed page-footer__nav-list--nojs" id="page-footer__nav-list">
               <li class="page-footer__nav-item"><a href="">О компании</a></li>
               <li class="page-footer__nav-item"><a href="">Продукты</a></li>
               <li class="page-footer__nav-item"><a href="">Производство печатных плат</a></li>
@@ -193,11 +196,16 @@
             </ul>
           </div>
           <div class="page-footer__contacts">
-            <h2>Наш офис</h2>
-            <p><a href="">г. Мытищи, Олимпийский проспект, д.10</a></p>
-            <p><a href="tel:+7 (495) 589-40-50">+7 (495) 589-40-50</a></p>
-            <p><a href="tel:+7 (925) 003-87-67">+7 (925) 003-87-67</a></p>
-            <p><a href="tel:+7 (926) 926-080-79">+7 (926) 926-080-79</a></p>
+            <div class="page-footer__header-block">
+              <h2>Наш офис</h2>
+              <button class="page-footer__contacts-button" id="contacts-button"></button>
+            </div>
+            <div class="page-footer__contacts-block page-footer__contacts-block--closed page-footer__contacts-block--nojs" id="page-footer__contacts-block">
+              <p><a href="">г. Мытищи, Олимпийский проспект, д.10</a></p>
+              <p><a href="tel:+7 (495) 589-40-50">+7 (495) 589-40-50</a></p>
+              <p><a href="tel:+7 (925) 003-87-67">+7 (925) 003-87-67</a></p>
+              <p><a href="tel:+7 (926) 926-080-79">+7 (926) 926-080-79</a></p>
+            </div>
           </div>
         </div>
 
