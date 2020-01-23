@@ -1,10 +1,8 @@
 'use strict';
-
+// всплывающее окно
 var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
-// var popupContainer = document.getElementById('popup__container');
-
 
 callback.addEventListener('click', function () {
   if (popup.classList.contains('popup--closed')) {
@@ -39,6 +37,8 @@ popup.addEventListener('click', function (event) {
   }
 });
 
+
+// раскрывающееся меню в подвале моб версии
 var navButton = document.getElementById('nav-button');
 var footerNavList = document.getElementById('page-footer__nav-list');
 var contactsButton = document.getElementById('contacts-button');
@@ -68,30 +68,29 @@ contactsButton.addEventListener('click', function () {
 });
 
 
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
-//
-// pageHeader.classList.remove('page-header--nojs');
-//
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
-
-// var popup = document.getElementById('popup');
-// var popupClose = document.getElementById('popup__close');
-// var callback = document.getElementById('callback');
-//
-//
-// callback.addEventListener('click', function () {
-//   popup.style.display = 'block';
-// });
-//
-// popupClose.addEventListener('click', function () {
-//   popup.style.display = 'none';
-// });
+// плавная прокрутка к якорю
+var linkNav = document.querySelectorAll('[href^="#"]'); // выбираем все ссылки к якорю на странице
+var V = 0.5; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (var i = 0; i < linkNav.length; i++) {
+  linkNav[i].addEventListener('click', function (e) { // по клику на ссылку
+    e.preventDefault(); // отменяем стандартное поведение
+    var w = window.pageYOffset; // производим прокрутка прокрутка
+    var hash = this.href.replace(/[^#]*(.*)/, '$1'); // к id элемента, к которому нужно перейти
+    var t = document.querySelector(hash).getBoundingClientRect().top; // отступ от окна браузера до id
+    var start = null;
+    requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+    function step(time) {
+      if (start === null) {
+        start = time;
+      }
+      var progress = time - start;
+      var r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+      window.scrollTo(0, r);
+      if (r !== w + t) {
+        requestAnimationFrame(step);
+      } else {
+        location.hash = hash; // URL с хэшем
+      }
+    }
+  }, false);
+}

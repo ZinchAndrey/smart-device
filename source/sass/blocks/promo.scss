@@ -64,6 +64,19 @@
   display: none;
 }
 
+.promo__scroll-link {
+  position: absolute;
+  transform: rotate(-90deg);
+  padding: 5px;
+  left: -20px;
+  bottom: 125px;
+  font-family: $pt-mono;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.5;
+}
+
 .promo__image {
   position: absolute;
   width: 50%;
@@ -91,6 +104,10 @@
     p::before {
       width: 33px;
     }
+  }
+
+  .promo__scroll-link {
+    display: none;
   }
 
   .promo__wrapper {
