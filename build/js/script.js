@@ -3,6 +3,7 @@
 var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
+// var popupContainer = document.getElementById('popup__container');
 
 
 callback.addEventListener('click', function () {
@@ -18,6 +19,24 @@ callback.addEventListener('click', function () {
 popupClose.addEventListener('click', function () {
   popup.classList.add('popup--closed');
   popup.classList.remove('popup--opened');
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.code == 'Escape') {
+    if (popup.classList.contains('popup--opened')) {
+      popup.classList.add('popup--closed');
+      popup.classList.remove('popup--opened');
+    }
+  }
+});
+
+popup.addEventListener('click', function (event) {
+  if (event.target == event.currentTarget) {
+    if (popup.classList.contains('popup--opened')) {
+      popup.classList.add('popup--closed');
+      popup.classList.remove('popup--opened');
+    }
+  }
 });
 
 var navButton = document.getElementById('nav-button');

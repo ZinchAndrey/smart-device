@@ -1,9 +1,8 @@
 'use strict';
-
+// всплывающее окно
 var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
-
 
 callback.addEventListener('click', function () {
   if (popup.classList.contains('popup--closed')) {
@@ -20,6 +19,26 @@ popupClose.addEventListener('click', function () {
   popup.classList.remove('popup--opened');
 });
 
+document.addEventListener('keydown', function (event) {
+  if (event.code == 'Escape') {
+    if (popup.classList.contains('popup--opened')) {
+      popup.classList.add('popup--closed');
+      popup.classList.remove('popup--opened');
+    }
+  }
+});
+
+popup.addEventListener('click', function (event) {
+  if (event.target == event.currentTarget) {
+    if (popup.classList.contains('popup--opened')) {
+      popup.classList.add('popup--closed');
+      popup.classList.remove('popup--opened');
+    }
+  }
+});
+
+
+// раскрывающееся меню в подвале моб версии
 var navButton = document.getElementById('nav-button');
 var footerNavList = document.getElementById('page-footer__nav-list');
 var contactsButton = document.getElementById('contacts-button');
@@ -48,31 +67,4 @@ contactsButton.addEventListener('click', function () {
   }
 });
 
-
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
-//
-// pageHeader.classList.remove('page-header--nojs');
-//
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
-
-// var popup = document.getElementById('popup');
-// var popupClose = document.getElementById('popup__close');
-// var callback = document.getElementById('callback');
-//
-//
-// callback.addEventListener('click', function () {
-//   popup.style.display = 'block';
-// });
-//
-// popupClose.addEventListener('click', function () {
-//   popup.style.display = 'none';
-// });
+// плавная прокрутка к якорю
