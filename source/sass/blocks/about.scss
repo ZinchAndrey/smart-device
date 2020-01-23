@@ -25,6 +25,11 @@
       height: 317px;
       left: -210px;
       background-image: url("../img/2005@1x.png");
+      background-size: 220px 317px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/2005@2x.png");
+      }
     }
   }
 

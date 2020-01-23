@@ -16,6 +16,10 @@ $roboto: "Roboto", "Arial", sans-serif;
 $roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
 $pt-mono: "PT Mono", "Arial", serif;
 
+//ретинизация
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
 //контейнеры
 @mixin container-desktop-wide() {
   padding: 0 25px;

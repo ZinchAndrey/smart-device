@@ -46,14 +46,26 @@
 
   &--manufacture {
     background-image: url("../img/manufacture@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/manufacture@2x.jpg");
+    }
   }
 
   &--montage {
     background-image: url("../img/montage@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage@2x.jpg");
+    }
   }
 
   &--lights {
     background-image: url("../img/lights@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lights@2x.jpg");
+    }
   }
 }
 
@@ -117,14 +129,26 @@
 
     &--manufacture {
       background-image: url("../img/manufacture-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/manufacture-tablet@2x.jpg");
+      }
     }
 
     &--montage {
       background-image: url("../img/montage-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/montage-tablet@2x.jpg");
+      }
     }
 
     &--lights {
       background-image: url("../img/lights-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lights-tablet@2x.jpg");
+      }
     }
   }
 }
@@ -152,14 +176,26 @@
 
     &--manufacture {
       background-image: url("../img/manufacture-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/manufacture-mobile@2x.jpg");
+      }
     }
 
     &--montage {
       background-image: url("../img/montage-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/montage-mobile@2x.jpg");
+      }
     }
 
     &--lights {
       background-image: url("../img/lights-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lights-mobile@2x.jpg");
+      }
     }
   }
 }
