@@ -21,6 +21,9 @@
     padding-bottom: 278px;
     position: relative;
     z-index: 3;
+    background-image: url("../img/triangles@1x.png");
+    background-repeat: no-repeat;
+    background-position: 102% 0;
   }
 
   h2 {
@@ -93,9 +96,9 @@
   left: 100%;
   margin-left: -46%;
   top: 140px;
-  background-image: url("../img/triangles@1x.png");
-  background-repeat: no-repeat;
-  background-position: -5px -140px;
+  // background-image: url("../img/triangles@1x.png");
+  // background-repeat: no-repeat;
+  // background-position: -5px -140px;
 }
 
 @media (max-width: 1023px) {
