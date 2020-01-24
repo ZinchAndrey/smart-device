@@ -77,6 +77,9 @@
       &::before {
         background-image: url("../img/2005-tablet@1x.png");
         height: 362px;
+        width: 251px;
+        background-repeat: no-repeat;
+        background-size: contain;
       }
     }
 

@@ -93,10 +93,15 @@
   left: 100%;
   margin-left: -46%;
   top: 140px;
+  background-image: url("../img/triangles@1x.png");
+  background-repeat: no-repeat;
+  background-position: -5px -140px;
 }
 
 @media (max-width: 1023px) {
   .promo {
+    background-color: $dark-grey;
+
     h2 {
       font-size: 60px;
       line-height: 70px;
@@ -133,11 +138,23 @@
   .promo__image {
     top: 10px;
     margin-left: -34%;
+    background-image: none;
 
     img {
       width: 465px;
       height: auto;
     }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 530px;
+    //   height: 506px;
+    //   border: 1px solid green;
+    //   background-image: url("../img/triangles@1x.png");
+    //   background-position: top left;
+    //   z-index: 3;
+    // }
   }
 }
 
