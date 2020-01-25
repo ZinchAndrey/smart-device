@@ -3,7 +3,9 @@
 var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
+// var popupContainer = document.getElementById('popup__container');
 
+// необходим рефакторинг
 callback.addEventListener('click', function () {
   if (popup.classList.contains('popup--closed')) {
     popup.classList.remove('popup--closed');
@@ -12,6 +14,7 @@ callback.addEventListener('click', function () {
     popup.classList.add('popup--closed');
     popup.classList.remove('popup--opened');
   }
+  username.focus();
 });
 
 popupClose.addEventListener('click', function () {
@@ -24,7 +27,11 @@ document.addEventListener('keydown', function (event) {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
+      popup.classList.remove('popup--error');
     }
+    // else if (popup.classList.contains('popup--error')) {
+    //   popup.classList.remove('popup--error');
+    // }
   }
 });
 
@@ -33,18 +40,37 @@ popup.addEventListener('click', function (event) {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
+      popup.classList.remove('popup--error');
     }
+    // else if (popup.classList.contains('popup--error')) {
+    //   popup.classList.remove('popup--error');
+    // }
+  }
+});
+
+
+// local storage
+var username = popup.querySelector('[name=username]');
+var phone = popup.querySelector('[name=phone]');
+var form = popup.querySelector('#callback-form');
+
+form.addEventListener('submit', function (evt) {
+  if (!username.value || !phone.value) {
+    evt.preventDefault();
+    popup.classList.add('popup--error');
+    console.log('Введите все данные формы');
+  } else {
+    localStorage.setItem('username', username.value);
+    localStorage.setItem('phone', phone.value);
   }
 });
 
 
 // раскрывающееся меню в подвале моб версии
 var navButton = document.getElementById('nav-button');
-// var footerNavList = document.getElementById('page-footer__nav-list');
 var footerNavBlock = document.getElementById('page-footer__nav');
 var contactsButton = document.getElementById('contacts-button');
 var contactsBlock = document.getElementById('page-footer__contacts');
-// var contactsList = document.getElementById('page-footer__contacts-block');
 
 footerNavBlock.classList.add('page-footer__nav--closed');
 contactsBlock.classList.add('page-footer__contacts--closed');
@@ -64,16 +90,6 @@ contactsButton.addEventListener('click', function () {
     contactsBlock.classList.add('page-footer__contacts--closed');
   }
 });
-
-// contactsButton.addEventListener('click', function () {
-//   if (contactsList.classList.contains('page-footer__contacts-block--closed')) {
-//     contactsList.classList.remove('page-footer__contacts-block--closed');
-//     contactsList.classList.add('page-footer__contacts-block--opened');
-//   } else {
-//     contactsList.classList.add('page-footer__contacts-block--closed');
-//     contactsList.classList.remove('page-footer__contacts-block--opened');
-//   }
-// });
 
 
 // плавная прокрутка к якорю

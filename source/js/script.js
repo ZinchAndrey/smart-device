@@ -3,7 +3,9 @@
 var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
+// var popupContainer = document.getElementById('popup__container');
 
+// необходим рефакторинг
 callback.addEventListener('click', function () {
   if (popup.classList.contains('popup--closed')) {
     popup.classList.remove('popup--closed');
@@ -12,6 +14,7 @@ callback.addEventListener('click', function () {
     popup.classList.add('popup--closed');
     popup.classList.remove('popup--opened');
   }
+  username.focus();
 });
 
 popupClose.addEventListener('click', function () {
@@ -24,6 +27,7 @@ document.addEventListener('keydown', function (event) {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
+      popup.classList.remove('popup--error');
     }
   }
 });
@@ -33,7 +37,25 @@ popup.addEventListener('click', function (event) {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
+      popup.classList.remove('popup--error');
     }
+  }
+});
+
+
+// local storage
+var username = popup.querySelector('[name=username]');
+var phone = popup.querySelector('[name=phone]');
+var form = popup.querySelector('#callback-form');
+
+form.addEventListener('submit', function (evt) {
+  if (!username.value || !phone.value) {
+    evt.preventDefault();
+    popup.classList.add('popup--error');
+    console.log('Введите все данные формы');
+  } else {
+    localStorage.setItem('username', username.value);
+    localStorage.setItem('phone', phone.value);
   }
 });
 
