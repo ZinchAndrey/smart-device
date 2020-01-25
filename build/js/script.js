@@ -29,9 +29,6 @@ document.addEventListener('keydown', function (event) {
       popup.classList.remove('popup--opened');
       popup.classList.remove('popup--error');
     }
-    // else if (popup.classList.contains('popup--error')) {
-    //   popup.classList.remove('popup--error');
-    // }
   }
 });
 
@@ -42,9 +39,6 @@ popup.addEventListener('click', function (event) {
       popup.classList.remove('popup--opened');
       popup.classList.remove('popup--error');
     }
-    // else if (popup.classList.contains('popup--error')) {
-    //   popup.classList.remove('popup--error');
-    // }
   }
 });
 

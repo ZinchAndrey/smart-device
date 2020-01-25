@@ -2,6 +2,19 @@
   @include container-desktop-tight;
   margin-top: 110px;
   margin-bottom: 75px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 640px;
+    height: 640px;
+    background-image: url("../img/background-triangle-right.png");
+    background-position: center;
+    left: 27%;
+    top: 22%;
+    z-index: -1;
+  }
 }
 
 .advantages__list {
@@ -11,6 +24,18 @@
   justify-content: space-between;
   padding: 0;
   margin: 0;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 640px;
+  //   height: 640px;
+  //   background-image: url("../img/background-triangle-right.png");
+  //   background-position: center;
+  //   left: 27%;
+  //   top: 22%;
+  //   z-index: -1;
+  // }
 }
 
 .advantages__item {
