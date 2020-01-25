@@ -20,7 +20,7 @@ popupClose.addEventListener('click', function () {
 });
 
 document.addEventListener('keydown', function (event) {
-  if (event.code == 'Escape') {
+  if (event.code === 'Escape') {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
@@ -29,7 +29,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 popup.addEventListener('click', function (event) {
-  if (event.target == event.currentTarget) {
+  if (event.target === event.currentTarget) {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
@@ -40,32 +40,40 @@ popup.addEventListener('click', function (event) {
 
 // раскрывающееся меню в подвале моб версии
 var navButton = document.getElementById('nav-button');
-var footerNavList = document.getElementById('page-footer__nav-list');
+// var footerNavList = document.getElementById('page-footer__nav-list');
+var footerNavBlock = document.getElementById('page-footer__nav');
 var contactsButton = document.getElementById('contacts-button');
-var contactsList = document.getElementById('page-footer__contacts-block');
+var contactsBlock = document.getElementById('page-footer__contacts');
+// var contactsList = document.getElementById('page-footer__contacts-block');
 
-footerNavList.classList.remove('page-footer__nav-list--nojs');
-contactsList.classList.remove('page-footer__contacts-block--nojs');
+footerNavBlock.classList.add('page-footer__nav--closed');
+contactsBlock.classList.add('page-footer__contacts--closed');
 
 navButton.addEventListener('click', function () {
-  if (footerNavList.classList.contains('page-footer__nav-list--closed')) {
-    footerNavList.classList.remove('page-footer__nav-list--closed');
-    footerNavList.classList.add('page-footer__nav-list--opened');
+  if (footerNavBlock.classList.contains('page-footer__nav--closed')) {
+    footerNavBlock.classList.remove('page-footer__nav--closed');
   } else {
-    footerNavList.classList.add('page-footer__nav-list--closed');
-    footerNavList.classList.remove('page-footer__nav-list--opened');
+    footerNavBlock.classList.add('page-footer__nav--closed');
   }
 });
 
 contactsButton.addEventListener('click', function () {
-  if (contactsList.classList.contains('page-footer__contacts-block--closed')) {
-    contactsList.classList.remove('page-footer__contacts-block--closed');
-    contactsList.classList.add('page-footer__contacts-block--opened');
+  if (contactsBlock.classList.contains('page-footer__contacts--closed')) {
+    contactsBlock.classList.remove('page-footer__contacts--closed');
   } else {
-    contactsList.classList.add('page-footer__contacts-block--closed');
-    contactsList.classList.remove('page-footer__contacts-block--opened');
+    contactsBlock.classList.add('page-footer__contacts--closed');
   }
 });
+
+// contactsButton.addEventListener('click', function () {
+//   if (contactsList.classList.contains('page-footer__contacts-block--closed')) {
+//     contactsList.classList.remove('page-footer__contacts-block--closed');
+//     contactsList.classList.add('page-footer__contacts-block--opened');
+//   } else {
+//     contactsList.classList.add('page-footer__contacts-block--closed');
+//     contactsList.classList.remove('page-footer__contacts-block--opened');
+//   }
+// });
 
 
 // плавная прокрутка к якорю
