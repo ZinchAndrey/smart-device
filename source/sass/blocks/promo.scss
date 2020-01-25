@@ -3,6 +3,7 @@
   color: $white;
   position: relative;
   overflow: hidden;
+  min-height: 764px;
 
   // &::before {
   //   content: "";
@@ -103,7 +104,8 @@
 
 @media (max-width: 1023px) {
   .promo {
-    background-color: $dark-grey;
+    min-height: 585px;
+    // background-color: $dark-grey;
 
     h2 {
       font-size: 60px;
@@ -163,6 +165,8 @@
 
 @media (max-width: 767px) {
   .promo {
+    min-height: 557px;
+
     h2 {
       font-size: 40px;
       line-height: 47px;

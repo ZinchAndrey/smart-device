@@ -11,7 +11,8 @@
     position: absolute;
     top: 0;
     background-image: url("../img/background-main@1x.png");
-    background-size: 1920px 950px;
+    // background-size: 1920px 950px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: $dark-grey;
   }
@@ -143,7 +144,8 @@
     }
 
     &::before {
-      display: none;
+      // display: none;
+      height: 686px;
     }
   }
 
@@ -185,6 +187,11 @@
 }
 
 @media (max-width: 767px) {
+  .page-header {
+    &::before {
+      height: 647px;
+    }
+  }
   .page-header__container {
     @include container-mobile;
     padding-top: 10px;
