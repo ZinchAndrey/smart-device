@@ -125,7 +125,6 @@
 
 @media (max-width: 767px) {
   .advantages {
-    @include container-mobile;
     margin-top: 35px;
     margin-bottom: 40px;
   }

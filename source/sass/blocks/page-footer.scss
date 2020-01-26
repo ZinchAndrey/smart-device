@@ -44,16 +44,6 @@
     display: block;
   }
 
-  // &::before {
-  //   content: "";
-  //   width: 52px;
-  //   height: 52px;
-  //   position: absolute;
-  //   left: 0;
-  //   top: -5px;
-  //   background-image: url("../img/smart-device-logo.svg");
-  // }
-
   & span {
     font-family: $roboto;
     font-size: 12px;
@@ -64,10 +54,6 @@
   }
 }
 
-// .page-footer__social-wrapper {
-//   padding-top: 5px;
-// }
-
 .page-footer__social-list {
   display: flex;
   justify-content: space-between;
@@ -76,11 +62,19 @@
   margin-top: 45px;
   padding: 0;
 
-  @include link-click;
+  // @include link-click;
 }
 
 .page-footer__social-item {
   position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   & a::before {
     content: "";
