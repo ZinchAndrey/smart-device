@@ -18,12 +18,12 @@
 }
 
 .goods__list {
-  display: -ms-flex;
   display: flex;
   justify-content: space-between;
   padding-left: 0;
 
   a {
+    // display: block;
     width: calc(100% / 3 - 20px);
   }
 }
@@ -152,6 +152,7 @@
     }
   }
 }
+
 @media (max-width: 767px) {
   .goods {
     h2 {

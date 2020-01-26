@@ -18,13 +18,13 @@
 
   &__wrapper {
     @include container-desktop-wide;
-    padding-top: 200px;
+    padding-top: 225px;
     padding-bottom: 278px;
     position: relative;
     z-index: 3;
-    background-image: url("../img/triangles@1x.png");
-    background-repeat: no-repeat;
-    background-position: 102% 0;
+    // background-image: url("../img/triangles@1x.png");
+    // background-repeat: no-repeat;
+    // background-position: 102% 0;
   }
 
   h2 {
@@ -96,10 +96,15 @@
   width: 50%;
   left: 100%;
   margin-left: -46%;
-  top: 140px;
-  // background-image: url("../img/triangles@1x.png");
-  // background-repeat: no-repeat;
-  // background-position: -5px -140px;
+  top: 165px;
+  z-index: 2;
+}
+
+.promo__image-background {
+  position: absolute;
+  left: 100%;
+  margin-left: -46%;
+  top: 25px;
 }
 
 @media (max-width: 1023px) {
@@ -131,7 +136,7 @@
   }
 
   .promo__wrapper {
-    padding: 90px 35px 165px 25px;
+    padding: 115px 35px 165px 25px;
     width: 83%;
   }
 
@@ -141,7 +146,7 @@
   }
 
   .promo__image {
-    top: 10px;
+    top: 35px;
     margin-left: -34%;
     background-image: none;
 
@@ -149,17 +154,16 @@
       width: 465px;
       height: auto;
     }
+  }
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 530px;
-    //   height: 506px;
-    //   border: 1px solid green;
-    //   background-image: url("../img/triangles@1x.png");
-    //   background-position: top left;
-    //   z-index: 3;
-    // }
+  .promo__image-background {
+    top: -110px;
+    margin-left: -42%;
+
+    img {
+      width: 520px;
+      height: auto;
+    }
   }
 }
 

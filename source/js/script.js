@@ -59,6 +59,9 @@ form.addEventListener('submit', function (evt) {
   }
 });
 
+var im = new Inputmask('+7 (999) 999-99-99');
+im.mask(phone);
+
 
 // раскрывающееся меню в подвале моб версии
 var navButton = document.getElementById('nav-button');
