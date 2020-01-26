@@ -52,13 +52,14 @@ form.addEventListener('submit', function (evt) {
   if (!username.value || !phone.value) {
     evt.preventDefault();
     popup.classList.add('popup--error');
-    console.log('Введите все данные формы');
+    // console.log('Введите все данные формы');
   } else {
     localStorage.setItem('username', username.value);
     localStorage.setItem('phone', phone.value);
   }
 });
 
+// eslint-disable-next-line no-undef
 var im = new Inputmask('+7 (999) 999-99-99');
 im.mask(phone);
 
@@ -96,7 +97,7 @@ for (var i = 0; i < linkNav.length; i++) {
   linkNav[i].addEventListener('click', function (e) { // по клику на ссылку
     e.preventDefault(); // отменяем стандартное поведение
     var w = window.pageYOffset; // производим прокрутка прокрутка
-    var hash = this.href.replace(/[^#]*(.*)/, '$1'); // к id элемента, к которому нужно перейти
+    var hash = e.currentTarget.href.replace(/[^#]*(.*)/, '$1'); // к id элемента, к которому нужно перейти
     var t = document.querySelector(hash).getBoundingClientRect().top; // отступ от окна браузера до id
     var start = null;
     requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
