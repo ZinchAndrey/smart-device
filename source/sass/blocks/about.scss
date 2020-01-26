@@ -1,9 +1,14 @@
 .about {
-  padding-left: 555px;
-  padding-right: 375px;
-  padding-bottom: 110px;
+  // padding-left: 555px;
+  // padding-right: 375px;
+  // padding-bottom: 110px;
+  // padding: 0 25px;
+  // max-width: 1220px;
+  @include container-desktop-tight;
+  padding-left: 205px;
   color: $dark-grey-text;
   position: relative;
+  margin-bottom: 105px;
 
   h2 {
     margin: 0;
@@ -20,6 +25,11 @@
       height: 317px;
       left: -210px;
       background-image: url("../img/2005@1x.png");
+      background-size: 220px 317px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/2005@2x.png");
+      }
     }
   }
 
@@ -29,7 +39,11 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 30px;
+    margin: 20px 0;
+
+    .about__tablet {
+      font-size: 0;
+    }
   }
 }
 
@@ -43,5 +57,67 @@
   width: 180px;
   height: 45px;
   box-sizing: border-box;
-  margin-top: 35px;
+  margin-top: 40px;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+@media (max-width: 1023px) {
+  .about {
+    padding-left: 212px;
+    margin-bottom: 85px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 45px;
+
+      &::before {
+        background-image: url("../img/2005-tablet@1x.png");
+        height: 362px;
+        width: 251px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    p {
+      margin: 24px 0;
+
+      .about__tablet {
+        font-size: inherit;
+      }
+
+      .about__desktop {
+        font-size: 0;
+      }
+    }
+  }
+
+  .about__button {
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    @include container-mobile;
+    margin-bottom: 65px;
+
+    h2 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+
+    p {
+      margin-top: 22px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .about__button {
+    margin-top: -13px;
+  }
 }

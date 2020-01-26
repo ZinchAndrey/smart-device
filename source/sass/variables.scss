@@ -8,10 +8,44 @@ $light-grey: #ebebeb;
 $dark-grey-text: #666666;
 $black-background: #1b2d37;
 $black: #000000;
-$grey-border: rgba(98, 105, 98, 0.5);
+$grey-border: rgba(98, 105, 98, 0.2);
 
 
 //шрифты
 $roboto: "Roboto", "Arial", sans-serif;
 $roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
 $pt-mono: "PT Mono", "Arial", serif;
+
+//ретинизация
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+//контейнеры
+@mixin container-desktop-wide() {
+  padding: 0 25px;
+  max-width: 1461px;
+  width: 100%;
+}
+
+@mixin container-desktop-tight() {
+  padding: 0 25px;
+  max-width: 1220px;
+  width: 100%;
+}
+
+@mixin container-mobile() {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+//стилизация ссылок при наведении и нажатии
+@mixin link-click() {
+  a:hover {
+    opacity: 0.8;
+  }
+
+  a:active {
+    opacity: 0.3;
+  }
+}
