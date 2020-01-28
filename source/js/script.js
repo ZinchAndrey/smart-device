@@ -3,6 +3,7 @@
 var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
+var questions = document.getElementById('questions');
 // var popupContainer = document.getElementById('popup__container');
 
 // необходим рефакторинг
@@ -47,6 +48,7 @@ popup.addEventListener('click', function (event) {
 var username = popup.querySelector('[name=username]');
 var phone = popup.querySelector('[name=phone]');
 var form = popup.querySelector('#callback-form');
+var phoneQuestions = questions.querySelector('[name=phone]');
 
 form.addEventListener('submit', function (evt) {
   if (!username.value || !phone.value) {
@@ -59,9 +61,15 @@ form.addEventListener('submit', function (evt) {
   }
 });
 
+// маска формы popup
 // eslint-disable-next-line no-undef
 var im = new Inputmask('+7 (999) 999-99-99');
 im.mask(phone);
+
+// маска формы блока questions
+// eslint-disable-next-line no-undef
+var im2 = new Inputmask('+7 (999) 999-99-99');
+im2.mask(phoneQuestions);
 
 
 // раскрывающееся меню в подвале моб версии

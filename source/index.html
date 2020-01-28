@@ -17,6 +17,7 @@
       <div class="page-header__logo">
         <a href="#">
           <picture>
+            <!-- 1x: 38px, 2x: 404px -->
             <source media="(min-width: 768px)" srcset="../img/logo@2x.png">
             <img src="../img/smart-device-logo.svg" alt="Логотип">
           </picture>
@@ -40,16 +41,18 @@
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a class="promo__button button" href="#questions">Получить бесплатную консультацию</a>
-        <a class="promo__button--mobile button" href="#questions">Бесплатная консультация</a>
+        <a class="promo__button promo__button--mobile button" href="#questions">Бесплатная консультация</a>
         <a class="promo__scroll-link" href="#advantages">Скролл вниз</a>
       </div>
       <div class="promo__image">
+        <!-- 1x: w 705px, 2x: w 1410px -->
         <img
           src="img/chip@1x.png"
           srcset="img/chip@2x.png 2x"
           alt="Печатная плата">
       </div>
       <div class="promo__image-background">
+        <!-- 1x: w671px -->
         <img src="img/triangles@1x.png" alt="Background">
       </div>
     </section>
@@ -147,6 +150,7 @@
     </section>
     <section class="questions" id="questions">
       <div class="questions__container container">
+        <!-- 1x: w 511px, 2x: w 1022px -->
         <img src="../img/paper_airplane@1x.png"
               srcset="../img/paper_airplane@2x.png 2x" alt="paper_airplane" width="511" height="288">
         <div class="questions__wrapper">
@@ -155,7 +159,7 @@
           <form action="#" method="get">
             <div class="questions__input-block">
               <input required type="text" placeholder="Имя">
-              <input required type="tel" placeholder="Телефон">
+              <input required type="tel" placeholder="Телефон" name="phone">
               <textarea cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="questions__button-block">
@@ -192,6 +196,7 @@
         <div class="page-footer__social-wrapper">
           <div class="page-footer__logo">
             <a href="#">
+              <!-- 2x: w 432px -->
                 <img src="../img/logo-footer@2x.png" width="216" alt="Логотип">
             </a>
             <!-- Service Device<span>умные технологии</span> -->
