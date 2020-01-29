@@ -327,8 +327,7 @@
     &::before {
       width: 16px;
       height: 1px;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
+      transform: translateY(-50%);
       top: 50%;
       left: 0;
     }
@@ -358,8 +357,7 @@
       &::after {
         height: 16px;
         width: 1px;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
+        transform: translateX(-50%);
         left: 50%;
         top: 0;
       }
@@ -375,8 +373,7 @@
       &::after {
         height: 16px;
         width: 1px;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
+        transform: translateX(-50%);
         left: 50%;
         top: 0;
       }
