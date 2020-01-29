@@ -80,7 +80,8 @@
 
 .promo__scroll-link {
   position: absolute;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   padding: 5px;
   left: -20px;
   bottom: 125px;
@@ -187,13 +188,13 @@
   .promo__wrapper {
     @include container-mobile;
     width: 100%;
-    padding-top: 195px;
+    padding-top: 220px;
     padding-bottom: 70px;
   }
 
   .promo__image {
     left: 42%;
-    top: 0;
+    top: 25px;
 
     img {
       width: 301px;
