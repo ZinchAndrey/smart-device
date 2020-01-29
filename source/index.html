@@ -158,13 +158,13 @@
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="#" method="get">
             <div class="questions__input-block">
-              <input required type="text" placeholder="Имя">
+              <input required type="text" placeholder="Имя" name="username">
               <input required type="tel" placeholder="Телефон" name="phone">
-              <textarea cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+              <textarea cols="30" rows="7" placeholder="Ваш вопрос" name="question-field"></textarea>
             </div>
             <div class="questions__button-block">
               <button class="questions__button button" type="submit" name="question">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" id="agree">
+              <input class="visually-hidden" type="checkbox" id="agree" name="agree">
               <label for="agree">Я согласен на обработку  персональных данных</label>
             </div>
           </form>
@@ -180,11 +180,11 @@
           <div class="popup__input-block">
             <label><input required type="text" placeholder="Имя" name="username"></label>
             <label><input required type="tel" placeholder="Телефон" name="phone"></label>
-            <label><textarea cols="30" rows="5" placeholder="Ваш вопрос"></textarea></label>
+            <label><textarea cols="30" rows="5" placeholder="Ваш вопрос" name="question-block"></textarea></label>
           </div>
           <div class="popup__button-block">
             <button class="popup__button button" type="submit" name="question">Отправить</button>
-            <input type="checkbox" id="agree2"><label for="agree2">Я согласен на обработку  персональных данных</label>
+            <input type="checkbox" id="agree2" name="agree"><label for="agree2">Я согласен на обработку  персональных данных</label>
           </div>
         </form>
       </div>
