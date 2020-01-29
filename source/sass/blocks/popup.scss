@@ -15,7 +15,6 @@
 .popup__container {
   margin: 0 auto;
   width: 490px;
-  // height: 605px;
   background-color: $blue;
   color: $white;
   padding: 33px 40px;
@@ -40,7 +39,6 @@
     font-style: normal;
     font-weight: normal;
     font-size: 28px;
-    // line-height: 140.62%;
     margin: 0;
   }
 
@@ -58,20 +56,12 @@
     background-color: $light-blue;
     margin-bottom: 30px;
 
-    &::-webkit-input-placeholder {
-      color: $white;
+    &:hover {
+      opacity: 0.8;
     }
 
-    &::-moz-placeholder {
-      color: $white;
-    }
-
-    &:-ms-input-placeholder {
-      color: $white;
-    }
-
-    &::-ms-input-placeholder {
-      color: $white;
+    &:active {
+      opacity: 0.5;
     }
 
     &::placeholder {
@@ -88,20 +78,12 @@
     background-color: $light-blue;
     margin-bottom: 30px;
 
-    &::-webkit-input-placeholder {
-      color: $white;
+    &:hover {
+      opacity: 0.8;
     }
 
-    &::-moz-placeholder {
-      color: $white;
-    }
-
-    &:-ms-input-placeholder {
-      color: $white;
-    }
-
-    &::-ms-input-placeholder {
-      color: $white;
+    &:active {
+      opacity: 0.5;
     }
 
     &::placeholder {
@@ -110,13 +92,12 @@
   }
 }
 
+
 @keyframes popup-animation {
   0% {
     top: -500px;
   }
-  /* 	50% {
-    top: 50px;
-  } */
+
   100% {
     top: 136px;
   }
@@ -146,7 +127,6 @@
 
 .popup__button-block {
   box-sizing: border-box;
-  // justify-content: space-between;
 
   label {
     position: relative;

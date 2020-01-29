@@ -56,6 +56,14 @@
     background-color: $light-blue;
     margin-bottom: 40px;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
     &::-webkit-input-placeholder {
       color: $white;
     }
@@ -85,6 +93,14 @@
     background-color: $light-blue;
     margin-bottom: 40px;
     resize: vertical;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
 
     &::-webkit-input-placeholder {
       color: $white;

@@ -18,12 +18,10 @@
         <a href="#">
           <picture>
             <!-- 1x: 38px, 2x: 404px -->
-            <source media="(min-width: 768px)" srcset="../img/logo@2x.png">
-            <img src="../img/smart-device-logo.svg" alt="Логотип">
+            <source media="(min-width: 768px)" srcset="img/logo@2x.png">
+            <img src="img/smart-device-logo.svg" alt="Логотип">
           </picture>
-          <!-- <img src="../img/logo@1x.png" alt="Логотип" width="202"> -->
         </a>
-        <!-- Smart Device<span>умные технологии</span> -->
       </div>
       <div class="page-header__contacts">
         <ul class="page-header__contacts-list">
@@ -151,20 +149,20 @@
     <section class="questions" id="questions">
       <div class="questions__container container">
         <!-- 1x: w 511px, 2x: w 1022px -->
-        <img src="../img/paper_airplane@1x.png"
-              srcset="../img/paper_airplane@1x.png 1x, ../img/paper_airplane@2x.png 2x" alt="paper_airplane" width="511" height="288">
+        <img src="img/paper_airplane@1x.png"
+              srcset="img/paper_airplane@1x.png 1x, img/paper_airplane@2x.png 2x" alt="paper_airplane" width="511" height="288">
         <div class="questions__wrapper">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="#" method="get">
             <div class="questions__input-block">
-              <input required type="text" placeholder="Имя">
+              <input required type="text" placeholder="Имя" name="username">
               <input required type="tel" placeholder="Телефон" name="phone">
-              <textarea cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+              <textarea cols="30" rows="7" placeholder="Ваш вопрос" name="question-field"></textarea>
             </div>
             <div class="questions__button-block">
               <button class="questions__button button" type="submit" name="question">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" id="agree">
+              <input class="visually-hidden" type="checkbox" id="agree" name="agree">
               <label for="agree">Я согласен на обработку  персональных данных</label>
             </div>
           </form>
@@ -180,11 +178,11 @@
           <div class="popup__input-block">
             <label><input required type="text" placeholder="Имя" name="username"></label>
             <label><input required type="tel" placeholder="Телефон" name="phone"></label>
-            <label><textarea cols="30" rows="5" placeholder="Ваш вопрос"></textarea></label>
+            <label><textarea cols="30" rows="5" placeholder="Ваш вопрос" name="question-block"></textarea></label>
           </div>
           <div class="popup__button-block">
             <button class="popup__button button" type="submit" name="question">Отправить</button>
-            <input type="checkbox" id="agree2"><label for="agree2">Я согласен на обработку  персональных данных</label>
+            <input type="checkbox" id="agree2" name="agree"><label for="agree2">Я согласен на обработку  персональных данных</label>
           </div>
         </form>
       </div>
@@ -197,9 +195,8 @@
           <div class="page-footer__logo">
             <a href="#">
               <!-- 2x: w 432px -->
-                <img src="../img/logo-footer@2x.png" width="216" alt="Логотип">
+                <img src="img/logo-footer@2x.png" width="216" alt="Логотип">
             </a>
-            <!-- Service Device<span>умные технологии</span> -->
           </div>
           <span class="page-footer__social-text">1999-2018 SD Service Devices</span>
           <ul class="page-footer__social-list">
