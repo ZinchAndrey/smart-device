@@ -11,7 +11,7 @@
   <link href="fonts/pt-mono-v7-cyrillic_latin-regular.woff2" rel="preload" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="body-container" id="body-container">
   <header class="page-header">
     <div class="page-header__container container">
       <div class="page-header__logo">
@@ -158,7 +158,7 @@
             </div>
             <div class="questions__button-block">
               <button class="questions__button button" type="submit" name="question">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" id="agree" name="agree">
+              <input class="visually-hidden" type="checkbox" id="agree" name="agree" required="">
               <label for="agree">Я согласен на обработку  персональных данных</label>
             </div>
           </form>
@@ -178,7 +178,7 @@
           </div>
           <div class="popup__button-block">
             <button class="popup__button button" type="submit" name="question">Отправить</button>
-            <input type="checkbox" id="agree2" name="agree"><label for="agree2">Я согласен на обработку  персональных данных</label>
+            <input type="checkbox" id="agree2" name="agree" required=""><label for="agree2">Я согласен на обработку  персональных данных</label>
           </div>
         </form>
       </div>
@@ -196,9 +196,9 @@
           </div>
           <span class="page-footer__social-text">1999-2018 SD Service Devices</span>
           <ul class="page-footer__social-list">
-            <li class="page-footer__social-item page-footer__social-item--facebook"><a href="#"></a></li>
-            <li class="page-footer__social-item page-footer__social-item--ok"><a href="#"></a></li>
-            <li class="page-footer__social-item page-footer__social-item--vk"><a href="#"></a></li>
+            <li class="page-footer__social-item page-footer__social-item--facebook"><a href="#" aria-label="Facebook"></a></li>
+            <li class="page-footer__social-item page-footer__social-item--ok"><a href="#" aria-label="Одноклассники"></a></li>
+            <li class="page-footer__social-item page-footer__social-item--vk"><a href="#" aria-label="В контакте"></a></li>
           </ul>
         </div>
         <div class="page-footer__nav-container">
@@ -223,7 +223,7 @@
               <button class="page-footer__contacts-button" id="contacts-button" aria-label="Показать/скрыть список"></button>
             </div>
             <div class="page-footer__contacts-block">
-              <p><a href="">г. Мытищи, Олимпийский проспект, д.10</a></p>
+              <p><a href="#">г. Мытищи, Олимпийский проспект, д.10</a></p>
               <p><a href="tel:+7(495)5894050">+7 (495) 589-40-50</a></p>
               <p><a href="tel:+7(925)0038767">+7 (925) 003-87-67</a></p>
               <p><a href="tel:+7(926)92608079">+7 (926) 926-080-79</a></p>
