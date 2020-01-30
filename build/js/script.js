@@ -4,6 +4,7 @@ var popup = document.getElementById('popup');
 var popupClose = document.getElementById('popup__close');
 var callback = document.getElementById('callback');
 var questions = document.getElementById('questions');
+var bodyContainer = document.getElementById('body-container');
 // var popupContainer = document.getElementById('popup__container');
 
 // необходим рефакторинг
@@ -11,6 +12,7 @@ callback.addEventListener('click', function () {
   if (popup.classList.contains('popup--closed')) {
     popup.classList.remove('popup--closed');
     popup.classList.add('popup--opened');
+    bodyContainer.classList.add('body-container--popup-opened');
   } else {
     popup.classList.add('popup--closed');
     popup.classList.remove('popup--opened');
@@ -21,14 +23,16 @@ callback.addEventListener('click', function () {
 popupClose.addEventListener('click', function () {
   popup.classList.add('popup--closed');
   popup.classList.remove('popup--opened');
+  bodyContainer.classList.remove('body-container--popup-opened');
 });
 
 document.addEventListener('keydown', function (event) {
-  if (event.code === 'Escape') {
+  if (event.keyCode === 27) {
     if (popup.classList.contains('popup--opened')) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
       popup.classList.remove('popup--error');
+      bodyContainer.classList.remove('body-container--popup-opened');
     }
   }
 });
@@ -39,6 +43,7 @@ popup.addEventListener('click', function (event) {
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
       popup.classList.remove('popup--error');
+      bodyContainer.classList.remove('body-container--popup-opened');
     }
   }
 });
