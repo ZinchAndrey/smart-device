@@ -15,7 +15,7 @@
   <header class="page-header">
     <div class="page-header__container container">
       <div class="page-header__logo">
-        <a href="#">
+        <a href="#" aria-label="logo">
           <picture>
             <!-- 1x: 38px, 2x: 404px -->
             <source media="(min-width: 768px)" srcset="img/logo@2x.png">
@@ -25,10 +25,10 @@
       </div>
       <div class="page-header__contacts">
         <ul class="page-header__contacts-list">
-          <li class="page-header__contacts-item page-header__contacts-item--mail"><a href="mailto:info@sd.ru">info@sd.ru</a></li>
-          <li class="page-header__contacts-item page-header__contacts-item--phone"><a href="tel:+74950005252">+7 (495) 000 52 52</a></li>
+          <li class="page-header__contacts-item page-header__contacts-item--mail"><a href="mailto:info@sd.ru" name="mail">info@sd.ru</a></li>
+          <li class="page-header__contacts-item page-header__contacts-item--phone"><a href="tel:+74950005252" name="phone">+7 (495) 000 52 52</a></li>
         </ul>
-        <button class="page-header__button button" id="callback">Заказать звонок</button>
+        <button class="page-header__button button" id="callback" name="callback">Заказать звонок</button>
       </div>
     </div>
   </header>
@@ -38,9 +38,9 @@
       <div class="promo__wrapper container">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="promo__button button" href="#questions">Получить бесплатную консультацию</a>
-        <a class="promo__button promo__button--mobile button" href="#questions">Бесплатная консультация</a>
-        <a class="promo__scroll-link" href="#advantages">Скролл вниз</a>
+        <a class="promo__button button" href="#questions" aria-label="consultation">Получить бесплатную консультацию</a>
+        <a class="promo__button promo__button--mobile button" href="#questions" aria-label="consultation">Бесплатная консультация</a>
+        <a class="promo__scroll-link" href="#advantages" aria-label="scroll">Скролл вниз</a>
       </div>
       <div class="promo__image">
         <!-- 1x: w 705px, 2x: w 1410px -->
@@ -107,7 +107,7 @@
       <h2>О компании</h2>
       <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
       <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__tablet">..</span> <span class="about__desktop">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-      <a href="#" class="about__button button">Подробнее</a>
+      <a href="#" class="about__button button" name="more">Подробнее</a>
     </section>
     <section class="goods">
       <div class="goods__container container">
@@ -115,7 +115,7 @@
         <ul class="goods__list">
           <!-- <a href="#"> -->
             <li class="goods__item goods__item--manufacture">
-              <a href="#">
+              <a href="#" name="advantage">
                 <div class="goods__item-wrapper">
                   <h3>Производство <br>печатных плат</h3>
                 </div>
@@ -124,7 +124,7 @@
           <!-- </a> -->
           <!-- <a href="#"> -->
             <li class="goods__item goods__item--montage">
-              <a href="#">
+              <a href="#" name="advantage">
                 <div class="goods__item-wrapper">
                   <h3>Монтаж печатных <br>плат</h3>
                 </div>
@@ -133,7 +133,7 @@
           <!-- </a> -->
           <!-- <a href="#"> -->
             <li class="goods__item goods__item--lights">
-              <a href="#">
+              <a href="#" name="advantage">
                 <div class="goods__item-wrapper">
                   <h3>Комплектующие <br>для светотехники</h3>
                 </div>
@@ -169,7 +169,7 @@
       <div class="popup__container" id="popup__container">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <button class="popup__close" id="popup__close"></button>
+        <button class="popup__close" id="popup__close" name="popup-close"></button>
         <form action="#" method="post" id="callback-form">
           <div class="popup__input-block">
             <label><input required="" type="text" placeholder="Имя" name="username"></label>
@@ -205,22 +205,22 @@
           <div class="page-footer__nav" id="page-footer__nav">
             <div class="page-footer__header-block">
               <h2>Разделы сайта</h2>
-              <button class="page-footer__header-button" id="nav-button" aria-label="Показать/скрыть список"></button>
+              <button class="page-footer__header-button" id="nav-button" aria-label="Показать/скрыть список" name="show-hide"></button>
             </div>
             <ul class="page-footer__nav-list" id="page-footer__nav-list">
-              <li class="page-footer__nav-item"><a href="">О компании</a></li>
-              <li class="page-footer__nav-item"><a href="">Продукты</a></li>
-              <li class="page-footer__nav-item"><a href="">Производство печатных плат</a></li>
-              <li class="page-footer__nav-item"><a href="">Монтаж печатных плат</a></li>
-              <li class="page-footer__nav-item"><a href="">Комплектующие</a></li>
-              <li class="page-footer__nav-item"><a href="">Доставка</a></li>
-              <li class="page-footer__nav-item"><a href="">Контакты</a></li>
+              <li class="page-footer__nav-item"><a href="#">О компании</a></li>
+              <li class="page-footer__nav-item"><a href="#">Продукты</a></li>
+              <li class="page-footer__nav-item"><a href="#">Производство печатных плат</a></li>
+              <li class="page-footer__nav-item"><a href="#">Монтаж печатных плат</a></li>
+              <li class="page-footer__nav-item"><a href="#">Комплектующие</a></li>
+              <li class="page-footer__nav-item"><a href="#">Доставка</a></li>
+              <li class="page-footer__nav-item"><a href="#">Контакты</a></li>
             </ul>
           </div>
           <div class="page-footer__contacts" id="page-footer__contacts">
             <div class="page-footer__header-block">
               <h2>Наш офис</h2>
-              <button class="page-footer__contacts-button" id="contacts-button" aria-label="Показать/скрыть список"></button>
+              <button class="page-footer__contacts-button" id="contacts-button" aria-label="Показать/скрыть список" name="show/hide"></button>
             </div>
             <div class="page-footer__contacts-block">
               <p><a href="#">г. Мытищи, Олимпийский проспект, д.10</a></p>
