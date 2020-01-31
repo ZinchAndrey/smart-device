@@ -26,9 +26,9 @@
   line-height: 22px;
 
   position: fixed;
-  top: 136px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
   z-index: 4;
 
   animation-name: popup-animation;
@@ -100,7 +100,7 @@
   }
 
   100% {
-    top: 136px;
+    top: 50%;
   }
 }
 

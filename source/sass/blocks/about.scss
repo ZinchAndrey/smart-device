@@ -1,9 +1,4 @@
 .about {
-  // padding-left: 555px;
-  // padding-right: 375px;
-  // padding-bottom: 110px;
-  // padding: 0 25px;
-  // max-width: 1220px;
   @include container-desktop-tight;
   padding-left: 205px;
   color: $dark-grey-text;
@@ -49,7 +44,7 @@
 
 .about__button {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 24px;
   letter-spacing: 0.05em;
   color: $blue;
   border: 1px solid $blue;
