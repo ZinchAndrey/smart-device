@@ -1,7 +1,9 @@
 .page-header {
-  background-color: $dark-grey;
+  // background-color: $dark-grey;
   color: $white;
-  position: relative;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
 
   // &::before {
   //   content: "";
