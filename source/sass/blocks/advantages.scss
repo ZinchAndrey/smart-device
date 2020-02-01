@@ -3,9 +3,6 @@
   margin-top: 110px;
   margin-bottom: 75px;
   position: relative;
-  // background-image: url("../img/triangles-advantages@1x.png");
-  // background-repeat: no-repeat;
-  // background-position: center;
 
   &::before {
     content: "";
@@ -28,18 +25,6 @@
   justify-content: space-between;
   padding: 0;
   margin: 0;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 640px;
-  //   height: 640px;
-  //   background-image: url("../img/background-triangle-right.png");
-  //   background-position: center;
-  //   left: 27%;
-  //   top: 22%;
-  //   z-index: -1;
-  // }
 }
 
 .advantages__item {
@@ -101,7 +86,7 @@
 @media (max-width: 1023px) {
   .advantages {
     margin-top: 55px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   .advantages__item {
@@ -109,7 +94,7 @@
     padding-right: 20px;
     padding-top: 65px;
     min-height: 232px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 
     svg {
       top: 22px;
@@ -117,6 +102,36 @@
 
     p {
       margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    &--time {
+      svg {
+        width: 29px;
+        height: 35px;
+      }
+    }
+
+    &--suppliers {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &--confidentiality {
+      svg {
+        width: 30px;
+        height: 26px;
+        top: 25px;
+      }
+    }
+
+    &--cost {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }
