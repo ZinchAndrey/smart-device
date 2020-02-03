@@ -22,6 +22,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .goods__item {
@@ -31,6 +32,7 @@
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 16px;
 
   h3 {
     font-family: $roboto-condensed;
@@ -109,6 +111,7 @@
 
   .goods__list {
     flex-wrap: wrap;
+    margin-bottom: 16px;
   }
 
   .goods__item-wrapper {

@@ -55,29 +55,16 @@
     color: $white;
     background-color: $light-blue;
     margin-bottom: 40px;
+    border-radius: 0;
 
     &:hover {
       opacity: 0.8;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       opacity: 0.5;
-    }
-
-    &::-webkit-input-placeholder {
-      color: $white;
-    }
-
-    &::-moz-placeholder {
-      color: $white;
-    }
-
-    &:-ms-input-placeholder {
-      color: $white;
-    }
-
-    &::-ms-input-placeholder {
-      color: $white;
+      outline: none;
     }
 
     &::placeholder {
@@ -89,6 +76,7 @@
     width: 100%;
     padding: 15px 18px;
     border: none;
+    border-radius: 0;
     color: $white;
     background-color: $light-blue;
     margin-bottom: 40px;
@@ -98,24 +86,10 @@
       opacity: 0.8;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       opacity: 0.5;
-    }
-
-    &::-webkit-input-placeholder {
-      color: $white;
-    }
-
-    &::-moz-placeholder {
-      color: $white;
-    }
-
-    &:-ms-input-placeholder {
-      color: $white;
-    }
-
-    &::-ms-input-placeholder {
-      color: $white;
+      outline: none;
     }
 
     &::placeholder {
@@ -159,6 +133,11 @@
       border: 1px solid $white;
       left: 8px;
     }
+  }
+
+  input {
+    left: 15px;
+    top: 15px;
   }
 
   input:checked + label::before {

@@ -56,13 +56,16 @@
     color: $white;
     background-color: $light-blue;
     margin-bottom: 30px;
+    border-radius: 0;
 
     &:hover {
       opacity: 0.8;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       opacity: 0.5;
+      outline: none;
     }
 
     &::placeholder {
@@ -75,6 +78,7 @@
     box-sizing: border-box;
     padding: 14px 24px;
     border: none;
+    border-radius: 0;
     color: $white;
     background-color: $light-blue;
     margin-bottom: 30px;
@@ -83,8 +87,10 @@
       opacity: 0.8;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       opacity: 0.5;
+      outline: none;
     }
 
     &::placeholder {
@@ -154,7 +160,8 @@
   }
 
   input {
-    display: none;
+    top: 15px;
+    left: 15px;
   }
 
   input:checked + label::before {
