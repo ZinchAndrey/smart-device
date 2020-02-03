@@ -320,6 +320,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    &:focus {
+      outline: none;
+    }
+
     // &::before,
     // &::after {
     //   content: "";
