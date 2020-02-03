@@ -89,6 +89,9 @@ contactsBlock.classList.add('page-footer__contacts--closed');
 navButton.addEventListener('click', function () {
   if (footerNavBlock.classList.contains('page-footer__nav--closed')) {
     footerNavBlock.classList.remove('page-footer__nav--closed');
+    if (!contactsBlock.classList.contains('page-footer__contacts--closed')) {
+      contactsBlock.classList.add('page-footer__contacts--closed');
+    }
   } else {
     footerNavBlock.classList.add('page-footer__nav--closed');
   }
@@ -97,6 +100,9 @@ navButton.addEventListener('click', function () {
 contactsButton.addEventListener('click', function () {
   if (contactsBlock.classList.contains('page-footer__contacts--closed')) {
     contactsBlock.classList.remove('page-footer__contacts--closed');
+    if (!footerNavBlock.classList.contains('page-footer__nav--closed')) {
+      footerNavBlock.classList.add('page-footer__nav--closed');
+    }
   } else {
     contactsBlock.classList.add('page-footer__contacts--closed');
   }

@@ -154,12 +154,17 @@
             <div class="questions__input-block">
               <label for="username-questions-block" class="visually-hidden"></label><input required="" type="text" placeholder="Имя" name="username" id="username-questions-block">
               <label for="phone-questions-block" class="visually-hidden"></label><input required="" type="tel" placeholder="Телефон" name="phone" id="phone-questions-block">
-              <label for="question-field-questions-block" class="visually-hidden"></label><textarea cols="30" rows="7" placeholder="Ваш вопрос" name="question-field" id="question-field-questions-block"></textarea>
+              <label for="question-field-questions-block" class="visually-hidden"></label><textarea required="" cols="30" rows="7" placeholder="Ваш вопрос" name="question-field" id="question-field-questions-block"></textarea>
             </div>
             <div class="questions__button-block">
               <button class="questions__button button" type="submit" name="question">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" id="agree" name="agree" required="">
-              <label for="agree">Я согласен на обработку  персональных данных</label>
+              <div class="questions__input-wrapper">
+                <input class="visually-hidden" type="checkbox" id="agree" name="agree" required="">
+                <label for="agree">
+                  Я согласен на обработку  персональных данных
+                </label>
+              </div>
+
             </div>
           </form>
         </div>
@@ -178,7 +183,12 @@
           </div>
           <div class="popup__button-block">
             <button class="popup__button button" type="submit" name="question">Отправить</button>
-            <input type="checkbox" id="agree2" name="agree" required=""><label for="agree2">Я согласен на обработку  персональных данных</label>
+            <div class="popup__input-wrapper">
+              <input class="visually-hidden" type="checkbox" id="agree2" name="agree" required="">
+              <label for="agree2">
+                Я согласен на обработку  персональных данных
+              </label>
+            </div>
           </div>
         </form>
       </div>
