@@ -68,12 +68,28 @@ form.addEventListener('submit', function (evt) {
 
 // маска формы popup
 // eslint-disable-next-line no-undef
-var im = new Inputmask('+7 (999) 999-99-99');
+var im = new Inputmask('+7 (999) 999-99-99', {
+  oncomplete: function () {
+    phone.setCustomValidity('');
+  }
+});
+
+phone.addEventListener('input', function () {
+  phone.setCustomValidity('Введите корректный номер телефона');
+});
 im.mask(phone);
 
 // маска формы блока questions
 // eslint-disable-next-line no-undef
-var im2 = new Inputmask('+7 (999) 999-99-99');
+var im2 = new Inputmask('+7 (999) 999-99-99', {
+  oncomplete: function () {
+    phoneQuestions.setCustomValidity('');
+  }
+});
+
+phoneQuestions.addEventListener('input', function () {
+  phoneQuestions.setCustomValidity('Введите корректный номер телефона');
+});
 im2.mask(phoneQuestions);
 
 
